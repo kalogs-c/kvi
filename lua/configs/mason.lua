@@ -7,6 +7,9 @@ local mason = {
     -- web
     "svelte-language-server",
     "typescript-language-server",
+
+    -- elixir
+    "elixir-ls",
   },
 }
 

@@ -28,4 +28,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = require "configs.treesitter",
   },
+
+  -- AI
+  {
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
+  },
 }
