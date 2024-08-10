@@ -10,6 +10,9 @@ local mason = {
 
     -- elixir
     "elixir-ls",
+
+    -- golang
+    "gopls",
   },
 }
 

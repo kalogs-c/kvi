@@ -1,4 +1,16 @@
 return {
+  -- Nvim Tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = require "configs.nvim-tree",
+  },
+
+  -- Telescope
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = require "configs.telescope",
+  },
+
   -- formating
   {
     "stevearc/conform.nvim",
@@ -33,5 +45,17 @@ return {
   {
     "Exafunction/codeium.vim",
     event = "BufEnter",
+  },
+
+  -- leap
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    dependencies = {
+      "tpope/vim-repeat",
+    },
+    config = function()
+      require("leap").add_default_mappings()
+    end,
   },
 }
