@@ -7,6 +7,11 @@ local mason = {
     "javascript",
     "svelte",
     "css",
+
+    -- elixir,
+    "elixir",
+    "heex",
+    "eex",
   },
 }
 

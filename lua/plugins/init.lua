@@ -58,4 +58,46 @@ return {
       require("leap").add_default_mappings()
     end,
   },
+
+  -- test
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+
+      -- adapters
+      "jfpedroza/neotest-elixir",
+    },
+    config = function()
+      require "configs.neotest"
+    end,
+  },
+
+  -- wildmenu
+  {
+    "gelguy/wilder.nvim",
+    lazy = false,
+    config = function()
+      require "configs.wilder"
+    end,
+  },
+
+  -- Diagnostics
+  {
+    "folke/trouble.nvim",
+    opts = {
+      warn_no_results = false,
+    },
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>q",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Trouble Diagnostics",
+      },
+    },
+  },
 }
