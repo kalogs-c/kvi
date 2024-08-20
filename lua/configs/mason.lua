@@ -13,6 +13,11 @@ local mason = {
 
     -- golang
     "gopls",
+    "gofumpt",
+
+    -- C/C++
+    "clangd",
+    "clangd-format",
   },
 }
 

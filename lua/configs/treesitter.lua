@@ -12,6 +12,13 @@ local mason = {
     "elixir",
     "heex",
     "eex",
+
+    -- C/C++
+    "c",
+    "cpp",
+
+    -- Go
+    "go",
   },
 }
 

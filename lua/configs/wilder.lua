@@ -10,5 +10,6 @@ wilder.set_option(
     highlighter = wilder.basic_highlighter(),
     left = { " ", wilder.popupmenu_devicons() },
     right = { " ", wilder.popupmenu_scrollbar() },
+    max_height = "30%",
   }
 )
