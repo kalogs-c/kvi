@@ -8,6 +8,8 @@ return {
 
     -- adapters
     "jfpedroza/neotest-elixir",
+    "nvim-neotest/neotest-go",
+    "nvim-neotest/neotest-jest",
   },
   config = function()
     require "configs.neotest"
