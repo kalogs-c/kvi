@@ -7,3 +7,4 @@ local map = vim.keymap.set
 map("i", "jk", "<ESC>")
 
 require "mappings.neotest"
+require "mappings.trouble"

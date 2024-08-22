@@ -17,7 +17,7 @@ local mason = {
 
     -- C/C++
     "clangd",
-    "clangd-format",
+    "clang-format",
   },
 }
 

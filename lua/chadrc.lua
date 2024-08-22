@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "gruvbox",
+  theme = "ayu_dark",
 
   hl_override = {
     Comment = { italic = true },
@@ -15,6 +15,10 @@ M.ui = {
   statusline = {
     theme = "minimal",
     separator_style = "round",
+  },
+
+  cmp = {
+    style = "atom_colored",
   },
 }
 
