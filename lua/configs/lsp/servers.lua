@@ -5,7 +5,7 @@ return {
 
   -- Elixir
   elixirls = {
-    cmd = { "/home/kalogs-c/.local/share/nvim/mason/bin/elixir-ls" },
+    cmd = { vim.fn.expand "$HOME/" .. "/.local/share/nvim/mason/bin/elixir-ls" },
   },
 
   -- Go
