@@ -1,3 +1,5 @@
+-- https://github.com/stevearc/conform.nvim/blob/master/README.md#formatters
+
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
