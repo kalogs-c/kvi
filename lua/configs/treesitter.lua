@@ -1,25 +1,21 @@
-local mason = {
-  ensure_installed = {
-    "lua",
+pcall(function()
+  dofile(vim.g.base46_cache .. "syntax")
+  dofile(vim.g.base46_cache .. "treesitter")
+end)
 
-    -- Web
-    "typescript",
-    "javascript",
-    "svelte",
-    "css",
-
-    -- elixir,
-    "elixir",
-    "heex",
-    "eex",
-
-    -- C/C++
-    "c",
-    "cpp",
-
-    -- Go
-    "go",
+return {
+  ensure_installed = { 
+  "lua",
+  "luadoc",
+  "printf", 
+  "vim", 
+  "vimdoc" 
   },
-}
 
-return mason
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+  },
+
+  indent = { enable = true },
+}

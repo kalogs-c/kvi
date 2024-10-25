@@ -1,3 +1,11 @@
-local config = require "nvchad.configs.telescope"
-
-return config
+return {
+	defaults = {
+    prompt_prefix = "   ",
+    selection_caret = " ",
+    entry_prefix = " ",
+    sorting_strategy = "ascending",
+    mappings = {
+      n = { ["q"] = require("telescope.actions").close },
+    },
+  },
+}

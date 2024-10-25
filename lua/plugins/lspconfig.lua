@@ -1,7 +1,7 @@
 return {
-  "neovim/nvim-lspconfig",
-  config = function()
-    require("nvchad.configs.lspconfig").defaults()
-    require "configs.lsp"
-  end,
+	"neovim/nvim-lspconfig",
+	event = { "BufReadPre", "BufNewFile", "User FilePost" },
+	config = function()
+		require("configs.lsp")
+	end,
 }
