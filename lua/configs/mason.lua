@@ -15,15 +15,16 @@ local mason = {
 local mason_lsp = {
 	automatic_installation = true,
 	ensure_installed = {
-		-- lua
 		"lua_ls",
+		"gopls",
+		"elixirls",
 	},
 }
 
 local mason_tools = {
 	ensure_installed = {
-		-- lua
 		"stylua",
+		"gofumpt",
 	},
 }
 

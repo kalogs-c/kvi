@@ -1,5 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 return {
+	-- lua
 	lua_ls = {
 		settings = {
 			Lua = {
@@ -19,4 +20,12 @@ return {
 			},
 		},
 	},
+
+	-- Elixir
+	elixirls = {
+		cmd = { vim.fn.expand("$HOME/") .. "/.local/share/nvim/mason/bin/elixir-ls" },
+	},
+
+	-- Go
+	gopls = {},
 }
