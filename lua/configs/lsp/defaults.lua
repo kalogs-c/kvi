@@ -23,6 +23,12 @@ defaults.on_attach = function(_, bufnr)
 	map("n", "gr", vim.lsp.buf.references, opts("Show references"))
 end
 
+defaults.on_init = function(client, _)
+	if client.supports_method("textDocument/semanticTokens") then
+		client.server_capabilities.semanticTokensProvider = nil
+	end
+end
+
 defaults.capabilities = vim.lsp.protocol.make_client_capabilities()
 
 defaults.capabilities.textDocument.completion.completionItem = {

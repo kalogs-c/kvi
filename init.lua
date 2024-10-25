@@ -8,3 +8,4 @@ end)
 
 require("options")
 require("configs.lazy")
+vim.cmd.colorscheme("catppuccin")
