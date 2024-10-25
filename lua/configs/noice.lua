@@ -41,4 +41,5 @@ local config = {
 		},
 	},
 }
+
 require("noice").setup(config)
