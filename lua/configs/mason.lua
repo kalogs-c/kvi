@@ -18,6 +18,8 @@ local mason_lsp = {
 		"lua_ls",
 		"gopls",
 		"elixirls",
+		"tsserver",
+		"eslint_d",
 	},
 }
 
