@@ -3,6 +3,8 @@ local options = {
 		lua = { "stylua" },
 		elixir = { "mix" },
 		go = { "goimports", "gofumpt" },
+		javascript = { "eslint_d" },
+		typescript = { "eslint_d" },
 	},
 
 	format_on_save = {

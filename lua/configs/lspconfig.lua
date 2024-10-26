@@ -12,6 +12,10 @@ local servers = {
 
 	-- Go
 	gopls = {},
+
+	-- JS/TS
+	tsserver = {},
+	eslint_d = {},
 }
 
 for name, opts in pairs(servers) do
