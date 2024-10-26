@@ -1,9 +1,16 @@
-local map = vim.keymap.set
-
-local neogit = require("neogit")
-
-map("n", "<leader>gs", neogit.open, { desc = "Git - Neogit - Open summary" })
-
-map("n", "<leader>gd", function()
-	neogit.open({ "diff" })
-end, { desc = "Git - Neogit - Open diff" })
+return {
+  {
+    "<leader>gs",
+    function()
+      require("neogit").open()
+    end,
+    desc = "Git - Open summary"
+  },
+  {
+    "<leader>gd",
+    function()
+      require("neogit").open({ "diff" })
+    end,
+    desc = "Git - Open diff"
+  },
+}

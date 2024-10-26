@@ -1,5 +1,7 @@
 local map = vim.keymap.set
 
+map("i", "jk", "<ESC>")
+
 -- navigation
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
@@ -14,8 +16,8 @@ map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 -- buffers
-map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "next buffer" })
-map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "previous buffer" })
+map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "next buffer" })
+map("n", "<S-Tab>", "<cmd>bprev<CR>", { desc = "previous buffer" })
 map("n", "<leader>x", "<cmd>bdelete!<CR>", { desc = "close buffer" })
 
 -- nvimtree

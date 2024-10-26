@@ -2,6 +2,9 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+o.encoding = "utf-8"
+o.fileencoding = "utf-8"
+
 o.laststatus = 3
 o.showmode = false
 

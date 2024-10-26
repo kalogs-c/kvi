@@ -1,11 +1,11 @@
 return {
-	"NeogitOrg/neogit",
-	cmd = "Neogit",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"sindrets/diffview.nvim",
+  "NeogitOrg/neogit",
+  cmd = "Neogit",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "sindrets/diffview.nvim",
 
-		"nvim-telescope/telescope.nvim",
-	},
-	config = true,
+    "nvim-telescope/telescope.nvim",
+  },
+  keys = require "mappings.neogit"
 }
