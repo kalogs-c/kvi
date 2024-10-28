@@ -5,6 +5,7 @@ return {
 		go = { "goimports", "gofumpt" },
 		javascript = { "eslint_d" },
 		typescript = { "eslint_d" },
+		rust = { "rustfmt" },
 	},
 
 	format_on_save = {
