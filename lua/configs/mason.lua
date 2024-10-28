@@ -20,6 +20,7 @@ local mason_lsp = {
 		"elixirls",
 		"ts_ls",
 		"rust_analyzer",
+		"eslint",
 	},
 }
 

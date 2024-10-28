@@ -5,13 +5,29 @@ end)
 
 return {
 	ensure_installed = {
-		"lua",
-		"luadoc",
 		"printf",
 		"vim",
 		"vimdoc",
-		"go",
+
+		"jsonc",
+		"yaml",
+		"markdown",
+		"markdown_inline",
+		"bash",
+		"sql",
+
+		"lua",
+		"luadoc",
+
 		"elixir",
+		"heex",
+
+		"go",
+		"rust",
+
+		"typescript",
+		"javascript",
+		"jsdoc",
 	},
 
 	highlight = {

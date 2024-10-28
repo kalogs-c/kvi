@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 
 map("i", "jk", "<ESC>")
+map("n", "<ESC>", "<cmd>noh<CR><ESC>", { desc = "no highlight" })
 
 -- navigation
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
