@@ -28,6 +28,8 @@ return {
 		"typescript",
 		"javascript",
 		"jsdoc",
+
+		"python",
 	},
 
 	highlight = {

@@ -36,4 +36,10 @@ return {
 
 	-- Rust
 	rust_analyzer = {},
+
+	-- C/C++
+	clangd = {},
+
+	-- Python
+	pyright = {},
 }
