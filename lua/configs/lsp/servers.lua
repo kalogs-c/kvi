@@ -39,6 +39,7 @@ return {
 
 	-- C/C++
 	clangd = {},
+	zls = {},
 
 	-- Python
 	pyright = {},

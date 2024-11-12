@@ -25,6 +25,7 @@ return {
 
 		"go",
 		"rust",
+		"zig",
 
 		"typescript",
 		"javascript",

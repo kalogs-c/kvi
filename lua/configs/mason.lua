@@ -22,6 +22,7 @@ local mason_lsp = {
 		"rust_analyzer",
 		"eslint",
 		"clangd",
+		"zls",
 		"pyright",
 	},
 }
