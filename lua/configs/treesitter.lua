@@ -21,6 +21,7 @@ return {
 
 		"elixir",
 		"heex",
+		"gleam",
 
 		"go",
 		"rust",

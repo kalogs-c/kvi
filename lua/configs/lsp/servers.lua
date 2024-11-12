@@ -1,4 +1,4 @@
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 return {
 	-- lua
 	lua_ls = {
@@ -42,4 +42,7 @@ return {
 
 	-- Python
 	pyright = {},
+
+	-- Gleam
+	gleam = {},
 }
