@@ -28,10 +28,13 @@ local mason_lsp = {
 local mason_tools = {
 	ensure_installed = {
 		"stylua",
-		"gofumpt",
-		"delve",
 		"eslint_d",
 		"clang-format",
+
+		-- Go
+		"delve",
+		"goimports",
+		"gofumpt",
 	},
 }
 
