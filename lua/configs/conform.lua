@@ -5,9 +5,7 @@ return {
 		go = { "goimports", "gofumpt" },
 		javascript = { "eslint_d" },
 		typescript = { "eslint_d" },
-		rust = { "rustfmt" },
 		c = { "clang-format" },
-		zig = { "zigfmt" },
 	},
 
 	format_on_save = {

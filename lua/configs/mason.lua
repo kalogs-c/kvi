@@ -19,10 +19,8 @@ local mason_lsp = {
 		"gopls",
 		"elixirls",
 		"ts_ls",
-		"rust_analyzer",
 		"eslint",
 		"clangd",
-		"zls",
 		"pyright",
 	},
 }
@@ -34,7 +32,6 @@ local mason_tools = {
 		"delve",
 		"eslint_d",
 		"clang-format",
-		"black",
 	},
 }
 

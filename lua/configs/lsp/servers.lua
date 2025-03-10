@@ -34,16 +34,9 @@ return {
 	ts_ls = {},
 	eslint = {},
 
-	-- Rust
-	rust_analyzer = {},
-
 	-- C/C++
 	clangd = {},
-	zls = {},
 
 	-- Python
 	pyright = {},
-
-	-- Gleam
-	gleam = {},
 }
