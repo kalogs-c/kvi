@@ -16,12 +16,8 @@ local mason_lsp = {
 	automatic_installation = true,
 	ensure_installed = {
 		"lua_ls",
-		"gopls",
-		"elixirls",
 		"ts_ls",
-		"eslint",
-		"clangd",
-		"pyright",
+		"clangd"
 	},
 }
 
@@ -30,11 +26,7 @@ local mason_tools = {
 		"stylua",
 		"eslint_d",
 		"clang-format",
-
-		-- Go
-		"delve",
-		"goimports",
-		"gofumpt",
+    "prettier"
 	},
 }
 
