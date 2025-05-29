@@ -1,9 +1,6 @@
 return {
 	formatters_by_ft = {
-		lua = { "stylua" },
-		elixir = { "mix format" },
-		go = { "goimports", "gofumpt" },
-		javascript = { "eslint_d" },
+		javascript = { "prettier" },
 		typescript = { "eslint_d" },
 		c = { "clang-format" },
 	},
