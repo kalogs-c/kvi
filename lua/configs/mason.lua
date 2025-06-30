@@ -1,41 +1,43 @@
 local mason = {
-	PATH = "skip",
+  PATH = "skip",
 
-	ui = {
-		icons = {
-			package_pending = " ",
-			package_installed = " ",
-			package_uninstalled = " ",
-		},
-	},
+  ui = {
+    icons = {
+      package_pending = " ",
+      package_installed = " ",
+      package_uninstalled = " ",
+    },
+  },
 
-	max_concurrent_installers = 10,
+  max_concurrent_installers = 10,
 }
 
 local mason_lsp = {
-	automatic_installation = true,
-	ensure_installed = {
-		"lua_ls",
-		"gopls",
-		"elixirls",
-		"ts_ls",
-		"eslint",
-		"clangd",
-		"pyright",
-	},
+  automatic_installation = true,
+  ensure_installed = {
+    "lua_ls",
+    "gopls",
+    -- "elixirls",
+    -- "ts_ls",
+    -- "eslint",
+    -- "clangd",
+    -- "pyright",
+    -- "htmx-lsp",
+    -- "html-lsp",
+  },
 }
 
 local mason_tools = {
-	ensure_installed = {
-		"stylua",
-		"eslint_d",
-		"clang-format",
+  ensure_installed = {
+    "stylua",
+    -- "eslint_d",
+    -- "clang-format",
 
-		-- Go
-		"delve",
-		"goimports",
-		"gofumpt",
-	},
+    -- Go
+    "delve",
+    "goimports",
+    "gofumpt",
+  },
 }
 
 require("mason").setup(mason)

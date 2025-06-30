@@ -1,43 +1,43 @@
 pcall(function()
-	dofile(vim.g.base46_cache .. "syntax")
-	dofile(vim.g.base46_cache .. "treesitter")
+  dofile(vim.g.base46_cache .. "syntax")
+  dofile(vim.g.base46_cache .. "treesitter")
 end)
 
 return {
-	ensure_installed = {
-		"printf",
-		"vim",
-		"vimdoc",
+  ensure_installed = {
+    "printf",
+    "vim",
+    "vimdoc",
 
-		"jsonc",
-		"yaml",
-		"markdown",
-		"markdown_inline",
-		"bash",
-		"sql",
+    "jsonc",
+    "yaml",
+    "markdown",
+    "markdown_inline",
+    "bash",
+    -- "sql",
 
-		"lua",
-		"luadoc",
+    "lua",
+    "luadoc",
 
-		"elixir",
-		"heex",
-		"gleam",
+    -- "elixir",
+    -- "heex",
+    -- "gleam",
 
-		"go",
-		"rust",
-		"zig",
+    "go",
+    -- "rust",
+    -- "zig",
 
-		"typescript",
-		"javascript",
-		"jsdoc",
+    -- "typescript",
+    -- "javascript",
+    -- "jsdoc",
 
-		"python",
-	},
+    -- "python",
+  },
 
-	highlight = {
-		enable = true,
-		use_languagetree = true,
-	},
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+  },
 
-	indent = { enable = true },
+  indent = { enable = true },
 }
