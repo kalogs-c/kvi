@@ -73,4 +73,4 @@
 (when (is-wsl)
   (set-wsl-clipboard 
     "clip.exe"
-    "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))"))
+ ))
