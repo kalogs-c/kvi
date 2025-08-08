@@ -1,2 +1,2 @@
-require "mappings.core"
-require "mappings.netrw"
+require("mappings.core")
+require("mappings.nvimtree")

@@ -1,0 +1,17 @@
+return {
+	"nvim-neotest/neotest",
+	dependencies = {
+		"nvim-neotest/nvim-nio",
+		"nvim-lua/plenary.nvim",
+		"antoinemadec/FixCursorHold.nvim",
+		"nvim-treesitter/nvim-treesitter",
+
+		-- adapters
+		"nvim-neotest/neotest-go",
+	},
+	config = function()
+		local opts = require("configs.neotest")
+		require("neotest").setup(opts)
+	end,
+	keys = require("mappings.neotest"),
+}

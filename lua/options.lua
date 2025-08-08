@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.o.relativenumber = true
 vim.o.confirm = true
+vim.opt.termguicolors = true
 
 -- encoding
 vim.o.encoding = "utf-8"
@@ -41,21 +42,15 @@ vim.o.wrap = false
 -- interval for writing swap file to disk, also used by gitsigns
 vim.o.updatetime = 250
 
--- disable some default providers
-vim.g.loaded_node_provider = 0
-vim.g.loaded_python3_provider = 0
-vim.g.loaded_perl_provider = 0
-vim.g.loaded_ruby_provider = 0
-
 -- clipboard on wsl2
-function isWsl()
-	local wslEnv = vim.fn.getenv("WSLENV")
+function is_wsl()
+	local wsl_env = vim.fn.getenv("WSLENV")
 	local uname = vim.fn.system("uname -r")
 
-	return wslEnv ~= vim.NIL or uname:match("WSL")
+	return wsl_env ~= vim.NIL or uname:match("WSL")
 end
 
-if isWsl() then
+if is_wsl() then
 	vim.g.clipboard = {
 		name = "WslClipboard",
 		copy = {

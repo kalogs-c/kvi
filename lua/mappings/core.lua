@@ -4,8 +4,6 @@ map("i", "jk", "<ESC>")
 map("n", "<ESC>", "<cmd>noh<CR><ESC>")
 
 -- move on insert mode
-map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
-map("i", "<C-e>", "<End>", { desc = "move end of line" })
 map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
 map("i", "<C-j>", "<Down>", { desc = "move down" })
@@ -31,11 +29,11 @@ map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
 -- indenting
-map({"n", "v"}, ">", ">gv")
-map({"n", "v"}, "<", "<gv")
+map({ "n", "v" }, ">", ">gv")
+map({ "n", "v" }, "<", "<gv")
 
 -- save
-map({"i", "x", "n", "s"}, "<C-s>", "<cmd>w<cr><esc>", { desc = "save File" })
+map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "save File" })
 
 -- diagnostics
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "show diagnostics" })

@@ -1,8 +1,9 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	branch = "0.1.x",
+  cmd = "Telescope",
+  version = false,
 	dependencies = { 
     "nvim-lua/plenary.nvim"
   },
-	cmd = "Telescope",
+  keys = require "mappings.telescope"
 }
