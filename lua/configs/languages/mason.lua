@@ -12,6 +12,7 @@ local mason = {
 local mason_lsp = {
 	ensure_installed = {},
 	automatic_installation = true,
+	automatic_enable = false,
 }
 
 local mason_tools = {
@@ -33,7 +34,7 @@ for _, lang in pairs(languages) do
 	if type(lang.tools) == "string" then
 		table.insert(mason_tools.ensure_installed, lang.tools)
 	else
-		for _, tool in pairs(lang.tools) do
+		for _, tool in pairs(lang.tools or {}) do
 			table.insert(mason_tools.ensure_installed, tool)
 		end
 	end

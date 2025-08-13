@@ -9,6 +9,7 @@ defaults.on_attach = function(_, bufnr)
 	local telescope_builtin = require("telescope.builtin")
 
 	map("gd", telescope_builtin.lsp_definitions, "go to definition")
+	map("gi", telescope_builtin.lsp_implementations, "go to implementations")
 	map("grn", vim.lsp.buf.rename, "rename")
 	map("<leader>ca", vim.lsp.buf.code_action, "code actions")
 	map("<leader>ls", telescope_builtin.lsp_document_symbols, "document symbols")
