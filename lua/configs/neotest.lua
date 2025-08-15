@@ -4,4 +4,4 @@ local config = {
 	},
 }
 
-require("neotest").setup(config)
+return config

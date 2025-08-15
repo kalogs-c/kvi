@@ -10,7 +10,7 @@ defaults.on_attach = function(_, bufnr)
 
 	map("gd", telescope_builtin.lsp_definitions, "go to definition")
 	map("gi", telescope_builtin.lsp_implementations, "go to implementations")
-	map("grn", vim.lsp.buf.rename, "rename")
+	map("grr", telescope_builtin.lsp_references, "go to references")
 	map("<leader>ca", vim.lsp.buf.code_action, "code actions")
 	map("<leader>ls", telescope_builtin.lsp_document_symbols, "document symbols")
 end
