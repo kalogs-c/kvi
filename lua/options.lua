@@ -37,30 +37,30 @@ vim.o.splitright = true
 vim.o.timeoutlen = 400
 vim.o.undofile = true
 vim.o.scrolloff = 10
-vim.o.wrap = false
+vim.o.wrap = true
 
 -- interval for writing swap file to disk, also used by gitsigns
 vim.o.updatetime = 250
 
 -- clipboard on wsl2
 function is_wsl()
-	local wsl_env = vim.fn.getenv("WSLENV")
-	local uname = vim.fn.system("uname -r")
+  local wsl_env = vim.fn.getenv("WSLENV")
+  local uname = vim.fn.system("uname -r")
 
-	return wsl_env ~= vim.NIL or uname:match("WSL")
+  return wsl_env ~= vim.NIL or uname:match("WSL")
 end
 
 if is_wsl() then
-	vim.g.clipboard = {
-		name = "WslClipboard",
-		copy = {
-			["+"] = "clip.exe",
-			["*"] = "clip.exe",
-		},
-		paste = {
-			["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-			["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-		},
-		cache_enabled = 0,
-	}
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+  }
 end
