@@ -1,0 +1,3 @@
+- Statusline com os buffers e o modo só com a primeira letra
+- Git (Diff e stage)
+- Arrumar o neotest

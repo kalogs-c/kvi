@@ -1,0 +1,5 @@
+(require :plugins)
+(require :configs.options)
+(require :configs.mappings)
+(require :configs.autocmds)
+(require :configs.colorscheme)
