@@ -1,4 +1,4 @@
--- [nfnl] fnl/configs/autocmds.fnl
+-- [nfnl] fnl/autocmds.fnl
 local autocmd = vim.api.nvim_create_autocmd
 local function augroup(group_name)
   return vim.api.nvim_create_augroup(group_name, {})

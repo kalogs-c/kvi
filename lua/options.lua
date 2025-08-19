@@ -1,4 +1,4 @@
--- [nfnl] fnl/configs/options.fnl
+-- [nfnl] fnl/options.fnl
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.loader.enable()

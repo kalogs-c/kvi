@@ -1,5 +1,7 @@
 (require :plugins)
-(require :configs.options)
-(require :configs.mappings)
-(require :configs.autocmds)
-(require :configs.colorscheme)
+(require :options)
+(require :mappings)
+(require :autocmds)
+
+;; Colors
+(vim.cmd.colorscheme "onedark_dark")
