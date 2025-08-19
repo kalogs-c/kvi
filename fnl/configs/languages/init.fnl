@@ -1,9 +1,35 @@
-{:lua    {:lsp "lua_ls"
-          :tools "stylua"
-          :fmt "stylua"}
- :go     {:lsp "gopls"
-          :tools ["delve" "goimports" "gofumpt"]
-          :fmt ["goimports" "gofumpt"]}
- :fennel {:lsp "fennel_ls"
-          :tools "fennel-ls"
-          :fmt "fnlfmt"}}
+{:lua {:lsp "lua_ls" :tools "stylua" :fmt "stylua"}
+ :fennel {:lsp "fennel_ls" :tools "fennel-ls" :fmt "fnlfmt"}
+ :go {:lsp {:name "gopls"
+            :opts {:settings {:gopls {:gofumpt true
+                                      :codelenses {:gc_details false
+                                                   :generate true
+                                                   :regenerate_cgo true
+                                                   :run_govulncheck true
+                                                   :test true
+                                                   :tidy true
+                                                   :upgrade_dependency true
+                                                   :vendor true}
+                                      :hints {:assignVariableTypes true
+                                              :compositeLiteralFields true
+                                              :compositeLiteralTypes true
+                                              :constantValues true
+                                              :functionTypeParameters true
+                                              :parameterNames true
+                                              :rangeVariableTypes true}
+                                      :analyses {:nilness true
+                                                 :unusedparams true
+                                                 :unusedwrite true
+                                                 :useany true}
+                                      :usePlaceholders true
+                                      :completeUnimported true
+                                      :staticcheck true
+                                      :directoryFilters ["-.git"
+                                                         "-.vscode"
+                                                         "-.idea"
+                                                         "-.vscode-test"
+                                                         "-node_modules"]
+                                      :semanticTokens true}}}}
+      :tools ["delve" "goimports" "gofumpt"]
+      :fmt ["goimports" "gofumpt"]}
+ :rust {:lsp "rust_analyzer" :tools "rust-analyzer" :fmt "rustfmt"}}

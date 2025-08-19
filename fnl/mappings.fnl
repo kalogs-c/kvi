@@ -52,9 +52,6 @@
 ;; Save
 (map ["i" "x" "n" "s"] "<C-s>" "<cmd>w<cr><esc>" {:desc "Save File"})
 
-;; Diagnostics
-(map "n" "<leader>q" vim.diagnostic.setloclist {:desc "Show Diagnostics"})
-
 ;; ========== TELESCOPE ========== 
 (local telescope (require :telescope.builtin))
 

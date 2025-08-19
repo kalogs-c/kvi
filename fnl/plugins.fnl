@@ -11,6 +11,7 @@
                {:src "https://github.com/neovim/nvim-lspconfig"}
                {:src "https://github.com/stevearc/conform.nvim"}
                {:src "https://github.com/nvim-treesitter/nvim-treesitter"}
+               {:src "https://github.com/Olical/conjure"}
                ;; Mason
                {:src "https://github.com/mason-org/mason.nvim"}
                {:src "https://github.com/mason-org/mason-lspconfig.nvim"}
@@ -20,6 +21,7 @@
                {:src "https://github.com/antoinemadec/FixCursorHold.nvim"}
                ;; Test Adapters
                {:src "https://github.com/nvim-neotest/neotest-go"}
+               {:src "https://github.com/rouge8/neotest-rust"}
                ;; Debug
                {:src "https://github.com/rcarriga/nvim-dap-ui"}
                {:src "https://github.com/nvim-neotest/nvim-nio"}
