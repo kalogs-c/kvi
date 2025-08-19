@@ -2,6 +2,7 @@
 
 (map "i" "jk" "<ESC>")
 (map "n" "<ESC>" "<cmd>noh<CR><ESC>")
+(map "v" "p" "\"_dP")
 
 ;; Center screen when jumping
 (map "n" "n" "nzzzv" {:desc "Next search result (centered)"})
@@ -73,19 +74,8 @@
 (map "n" "<C-n>" MiniFiles.open)
 
 ;; ========== TEST ========== 
-(local neotest (require :neotest))
-
-(map "n" "<leader>ts" neotest.summary.toggle {:desc "[Test] - Toggle Summary"})
-(map "n" "<leader>to"
-     (fn []
-       (neotest.output.open {:enter true}))
-     {:desc "[Test] - Open Test Output"})
-
-(map "n" "<leader>trn" neotest.run.run {:desc "[Test] - Run Nearest Test"})
-(map "n" "<leader>trf"
-     (fn []
-       (neotest.run.run (vim.fn.expand "%")))
-     {:desc "[Test] - Run File Tests"})
+(map "n" "<leader>trn" ":TestNearest<CR>" {:desc "[Test] - Run Nearest"})
+(map "n" "<leader>trf" ":TestFile<CR>" {:desc "[Test] - Run File"})
 
 ;; ========== DEBUG ========== 
 (local dap (require :dap))

@@ -14,14 +14,9 @@
                {:src "https://github.com/Olical/conjure"}
                ;; Mason
                {:src "https://github.com/mason-org/mason.nvim"}
-               {:src "https://github.com/mason-org/mason-lspconfig.nvim"}
                {:src "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"}
                ;; Test
-               {:src "https://github.com/nvim-neotest/neotest"}
-               {:src "https://github.com/antoinemadec/FixCursorHold.nvim"}
-               ;; Test Adapters
-               {:src "https://github.com/nvim-neotest/neotest-go"}
-               {:src "https://github.com/rouge8/neotest-rust"}
+               {:src "https://github.com/vim-test/vim-test"}
                ;; Debug
                {:src "https://github.com/rcarriga/nvim-dap-ui"}
                {:src "https://github.com/nvim-neotest/nvim-nio"}
@@ -36,6 +31,7 @@
 
 ;; UI
 (require :configs.lualine)
+(require :configs.telescope)
 
 ;; Languages
 (require :configs.languages.lsp)
@@ -43,9 +39,7 @@
 (require :configs.languages.conform)
 (require :configs.languages.blinkcmp)
 (require :configs.languages.treesitter)
-
-;; Test
-(require :configs.languages.neotest)
+(require :configs.languages.vim-test)
 
 ;; Debug / DAP
 (require :configs.languages.dap)

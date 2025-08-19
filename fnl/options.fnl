@@ -1,17 +1,20 @@
-(set vim.g.mapleader " ")
-(set vim.g.maplocalleader " ")
-
 ;; Basic settings
 (vim.loader.enable)
+(set vim.g.mapleader " ")
+(set vim.g.maplocalleader " ")
+(set vim.opt.confirm true)
+(set vim.opt.wrap false)
+(set vim.opt.mouse "a")
+(vim.opt.iskeyword:append "-")
+
+;; Numbers
 (set vim.opt.number true)
 (set vim.opt.relativenumber true)
 (set vim.opt.numberwidth 2)
-(set vim.opt.cursorline true)
-(set vim.opt.wrap false)
+
+;; Scroll
 (set vim.opt.scrolloff 10)
 (set vim.opt.sidescrolloff 8)
-(set vim.opt.confirm true)
-(set vim.opt.undofile true)
 
 ;; Indentation
 (set vim.opt.tabstop 2)
@@ -19,6 +22,10 @@
 (set vim.opt.softtabstop 2)
 (set vim.opt.expandtab true)
 (set vim.opt.smartindent true)
+
+;; Undo
+(set vim.opt.undofile true)
+(set vim.opt.undodir (.. (os.getenv "HOME") "/.vim/undodir"))
 
 ;; Search settings
 (set vim.opt.ignorecase true)
@@ -49,9 +56,6 @@
                         ])
 
 ;; Behavior settings
-(set vim.opt.mouse "a")
-(vim.opt.iskeyword:append "-")
-(vim.opt.clipboard:append "unnamedplus")
 
 ;; Folding settings
 (set vim.opt.foldmethod "expr")
@@ -83,7 +87,9 @@
 (set vim.g.loaded_perl_provider 0)
 (set vim.g.loaded_ruby_provider 0)
 
-;; WSL2 Clipboard
+;; Clipboard
+(vim.opt.clipboard:append "unnamedplus")
+
 (fn is-wsl []
   (let [wsl-env (vim.fn.getenv "WSLENV")
         uname (vim.fn.system "uname -r")]

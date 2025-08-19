@@ -10,4 +10,4 @@ dap.listeners.before.attach.dapui_config = dapui.open
 dap.listeners.before.launch.dapui_config = dapui.open
 dap.listeners.before.event_terminated.dapui_config = dapui.close
 dap.listeners.before.event_exited.dapui_config = dapui.close
-return vim.fn.sign_define("DapBreakpoint", {text = "\243\176\128\154"})
+return vim.fn.sign_define("DapBreakpoint", {text = "\239\134\146 "})

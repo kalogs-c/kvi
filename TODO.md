@@ -1,5 +1,2 @@
 - Git (Diff e stage)
-- Arrumar o neotest
-- Configurar telescope
-- Rust
-- Trouble?
+- Rust DAP
