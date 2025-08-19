@@ -11,6 +11,7 @@
 (set vim.opt.scrolloff 10)
 (set vim.opt.sidescrolloff 8)
 (set vim.opt.confirm true)
+(set vim.opt.undofile true)
 
 ;; Indentation
 (set vim.opt.tabstop 2)
