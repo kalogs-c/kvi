@@ -1,0 +1,11 @@
+-- [nfnl] fnl/plugins.fnl
+vim.pack.add({{src = "https://github.com/folke/which-key.nvim"}, {src = "https://github.com/olimorris/onedarkpro.nvim"}, {src = "https://github.com/kyazdani42/nvim-web-devicons"}, {src = "https://github.com/nvim-lualine/lualine.nvim"}, {src = "https://github.com/nvim-lua/plenary.nvim"}, {src = "https://github.com/nvim-telescope/telescope.nvim"}, {src = "https://github.com/saghen/blink.cmp"}, {src = "https://github.com/neovim/nvim-lspconfig"}, {src = "https://github.com/stevearc/conform.nvim"}, {src = "https://github.com/nvim-treesitter/nvim-treesitter"}, {src = "https://github.com/Olical/conjure"}, {src = "https://github.com/mason-org/mason.nvim"}, {src = "https://github.com/mason-org/mason-lspconfig.nvim"}, {src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"}, {src = "https://github.com/nvim-neotest/neotest"}, {src = "https://github.com/antoinemadec/FixCursorHold.nvim"}, {src = "https://github.com/nvim-neotest/neotest-go"}, {src = "https://github.com/rouge8/neotest-rust"}, {src = "https://github.com/rcarriga/nvim-dap-ui"}, {src = "https://github.com/nvim-neotest/nvim-nio"}, {src = "https://github.com/mfussenegger/nvim-dap"}, {src = "https://github.com/leoluz/nvim-dap-go"}, {src = "https://github.com/echasnovski/mini.files"}, {src = "https://github.com/echasnovski/mini.pairs"}, {src = "https://github.com/echasnovski/mini.surround"}, {src = "https://github.com/echasnovski/mini.splitjoin"}})
+require("configs.lualine")
+require("configs.languages.lsp")
+require("configs.languages.mason")
+require("configs.languages.conform")
+require("configs.languages.blinkcmp")
+require("configs.languages.treesitter")
+require("configs.languages.neotest")
+require("configs.languages.dap")
+return require("configs.mini")

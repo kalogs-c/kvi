@@ -1,11 +1,3 @@
-vim.g.mapleader = " "
-vim.o.cursorlineopt = "both"
-vim.o.relativenumber = true
-
-vim.schedule(function()
-	require("mappings")
-end)
-
-require("options")
-require("configs.lazy")
-vim.cmd.colorscheme("catppuccin")
+vim.pack.add({{src = "https://github.com/Olical/nfnl"}})
+require("nfnl").setup()
+return require("setup")
