@@ -4,6 +4,7 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"williamboman/mason.nvim",
+		"theHamsta/nvim-dap-virtual-text",
 
 		-- adapters
 		"leoluz/nvim-dap-go",
@@ -46,6 +47,14 @@ return {
 				require("dap").step_into()
 			end,
 			desc = "DEBUG - Step Into",
+		},
+		{
+			"<leader>?",
+			function()
+				require("dapui").eval()
+				require("dapui").eval() -- trick to focus
+			end,
+			desc = "DEBUG - Evaluate expression",
 		},
 	},
 }
