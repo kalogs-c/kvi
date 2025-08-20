@@ -3,7 +3,6 @@ return {
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
-		"theHamsta/nvim-dap-virtual-text",
 		"williamboman/mason.nvim",
 
 		-- adapters
@@ -12,5 +11,41 @@ return {
 	config = function()
 		require("configs.languages.dap")
 	end,
-	keys = require("mappings.dap"),
+	keys = {
+		{
+			"<leader>db",
+			function()
+				require("dap").toggle_breakpoint()
+			end,
+			desc = "DEBUG - Toggle breakpoint",
+		},
+		{
+			"<leader>dc",
+			function()
+				require("dap").continue()
+			end,
+			desc = "DEBUG - Continue",
+		},
+		{
+			"<leader>dt",
+			function()
+				require("dap").terminate()
+			end,
+			desc = "DEBUG - Terminate",
+		},
+		{
+			"<leader>dso",
+			function()
+				require("dap").step_over()
+			end,
+			desc = "DEBUG - Step Over",
+		},
+		{
+			"<leader>dsi",
+			function()
+				require("dap").step_into()
+			end,
+			desc = "DEBUG - Step Into",
+		},
+	},
 }

@@ -1,13 +1,13 @@
 local plugins = {
-	"ai",
-	"move",
 	"pairs",
-	splitjoin = { mappings = { toggle = "fS" } },
 	"cursorword",
 	"indentscope",
+	"surround",
+	splitjoin = { mappings = { toggle = "fS" } },
+	files = { mappings = { close = "<C-n>" } },
 }
 
-function setup_plugins()
+local function setup_plugins()
 	for key, value in pairs(plugins) do
 		local module = value
 		local opts = {}
@@ -19,6 +19,8 @@ function setup_plugins()
 
 		require("mini." .. module).setup(opts)
 	end
+
+	vim.keymap.set("n", "<C-n>", MiniFiles.open)
 end
 
 return {

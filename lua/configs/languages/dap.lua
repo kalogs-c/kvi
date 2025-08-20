@@ -1,9 +1,16 @@
 local dap = require("dap")
 local dapui = require("dapui")
 
-require("dapui").setup()
+require("dapui").setup({
+	elements = {
+		{ id = "repl", size = 1 },
+	},
+	position = "bottom",
+	size = 15,
+})
+
+-- Adapters
 require("dap-go").setup()
-require("nvim-dap-virtual-text").setup()
 
 dap.listeners.before.attach.dapui_config = dapui.open
 dap.listeners.before.launch.dapui_config = dapui.open

@@ -1,62 +1,94 @@
+-- Basic settings
+vim.loader.enable()
 vim.g.mapleader = " "
-vim.o.relativenumber = true
-vim.o.confirm = true
+vim.g.maplocalleader = " "
+vim.opt.confirm = true
+vim.opt.wrap = false
+vim.opt.mouse = "a"
+vim.opt.iskeyword:append("-")
+
+-- Numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 2
+
+-- Scroll
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 8
+
+-- Indentation
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+-- Undo
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+-- Search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Visual settings
 vim.opt.termguicolors = true
-
--- encoding
-vim.o.encoding = "utf-8"
-vim.o.fileencoding = "utf-8"
-
--- laststatus
-vim.o.laststatus = 3
-
--- clipboard and cursorline
-vim.o.clipboard = "unnamedplus"
-vim.o.cursorline = true
-vim.o.cursorlineopt = "both"
-
--- indent
-vim.o.expandtab = true
-vim.o.shiftwidth = 2
-vim.o.smartindent = true
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-
+vim.opt.signcolumn = "yes"
+vim.opt.cmdheight = 0
+vim.opt.showmode = false
+vim.opt.lazyredraw = true
+vim.opt.synmaxcol = 300
 vim.opt.fillchars = { eob = " " }
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.mouse = "a"
 
--- numbers
-vim.o.number = true
-vim.o.numberwidth = 2
+-- Cursor
+vim.opt.guicursor = {
+	"n-v-c:block", -- Normal, Visual, Command-line
+	"i-ci:ver25", -- Insert, Command-line Insert, Visual-exclusive
+	"r-cr:hor20", -- Replace, Command-line Replace
+	"o:hor50", -- Operator-pending
+	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor", -- All modes: blinking & highlight groups
+	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch mode
+}
 
-vim.o.signcolumn = "yes"
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.timeoutlen = 400
-vim.o.undofile = true
-vim.o.scrolloff = 10
-vim.o.wrap = false
+-- Folding settings
+vim.opt.foldmethod = "expr"
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
 
--- interval for writing swap file to disk, also used by gitsigns
-vim.o.updatetime = 250
+-- Split behavior
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
--- clipboard on wsl2
-function is_wsl()
+-- Command-line completion
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
+
+-- Better diff options
+vim.opt.diffopt:append("linematch:60")
+
+-- Performance improvements
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000
+
+-- Disable some default providers
+vim.g.loaded_node_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+
+-- Clipboard
+vim.opt.clipboard:append("unnamedplus")
+
+local function is_wsl()
 	local wsl_env = vim.fn.getenv("WSLENV")
 	local uname = vim.fn.system("uname -r")
-
-	return wsl_env ~= vim.NIL or uname:match("WSL")
+	return wsl_env ~= vim.NIL or uname:match("WSL") ~= nil
 end
 
 if is_wsl() then
 	vim.g.clipboard = {
 		name = "WslClipboard",
-		copy = {
-			["+"] = "clip.exe",
-			["*"] = "clip.exe",
-		},
+		copy = { ["+"] = "clip.exe", ["*"] = "clip.exe" },
 		paste = {
 			["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
 			["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
