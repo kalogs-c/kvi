@@ -64,7 +64,16 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 
 -- Better diff options
-vim.opt.diffopt:append("linematch:60")
+vim.opt.fillchars.diff = "/"
+vim.opt.diffopt = {
+	"internal",
+	"filler",
+	"closeoff",
+	"vertical",
+	"linematch:60",
+	"algorithm:histogram",
+	"indent-heuristic",
+}
 
 -- Performance improvements
 vim.opt.redrawtime = 10000
