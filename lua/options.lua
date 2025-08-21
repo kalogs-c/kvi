@@ -96,3 +96,6 @@ if is_wsl() then
 		cache_enabled = 0,
 	}
 end
+
+-- add binaries installed by mason.nvim to path
+vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, "/") .. ":" .. vim.env.PATH

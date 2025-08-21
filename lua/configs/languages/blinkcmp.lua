@@ -35,10 +35,7 @@ return {
 	-- Default list of enabled providers defined so that you can extend it
 	-- elsewhere in your config, without redefining it, due to `opts_extend`
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer", "lazydev" },
-		providers = {
-			lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
-		},
+		default = { "lsp", "path", "snippets", "buffer" },
 	},
 
 	fuzzy = { implementation = "lua" },

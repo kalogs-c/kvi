@@ -1,3 +1,4 @@
+---@class MasonSettings
 local mason = {
 	ui = {
 		icons = {
@@ -7,6 +8,7 @@ local mason = {
 		},
 	},
 	max_concurrent_installers = 10,
+	PATH = "skip",
 }
 
 local mason_lsp = {
@@ -20,6 +22,9 @@ local mason_tools = {
 	run_on_start = true,
 	start_delay = 3000,
 	ensure_installed = {},
+	integrations = {
+		["mason-lspconfig"] = true,
+	},
 }
 
 local languages = require("configs.languages")
