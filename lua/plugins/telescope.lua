@@ -37,5 +37,8 @@ return {
 		{ "<leader>fw", require("telescope.builtin").live_grep, desc = "find words" },
 		{ "<leader>fb", require("telescope.builtin").buffers, desc = "find buffers" },
 		{ "<leader>fz", require("telescope.builtin").current_buffer_fuzzy_find, desc = "find in current buffer" },
+		{ "<leader>fgs", require("telescope.builtin").git_status, desc = "git status" },
+		{ "<leader>fgb", require("telescope.builtin").git_branches, desc = "git branches" },
+		{ "<leader>fgc", require("telescope.builtin").git_commits, desc = "git commits" },
 	},
 }
