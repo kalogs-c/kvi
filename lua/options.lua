@@ -3,7 +3,7 @@ vim.loader.enable()
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.opt.confirm = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.mouse = "a"
 vim.opt.iskeyword:append("-")
 

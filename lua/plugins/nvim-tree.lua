@@ -31,13 +31,13 @@ return {
 				indent_markers = { enable = true },
 				icons = {
 					glyphs = {
-						default = "¾░êÜ",
+						default = "󰈚",
 						folder = {
-							default = "¯Ü¡",
-							empty = "¯¬â",
-							empty_open = "¯»ƒ",
-							open = "¯½Â",
-							symlink = "¯½¡",
+							default = "",
+							empty = "",
+							empty_open = "",
+							open = "",
+							symlink = "",
 						},
 						git = { unmerged = "¯½¥" },
 					},
