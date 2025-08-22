@@ -40,6 +40,8 @@ vim.diagnostic.config({
 	},
 })
 
+vim.lsp.inlay_hint.enable()
+
 local function merge_tables(t1, t2)
 	local result = {}
 	for k, v in pairs(t1) do

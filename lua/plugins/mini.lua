@@ -8,6 +8,7 @@ return {
 	{ "echasnovski/mini.cursorword", version = "*", opts = {} },
 	{ "echasnovski/mini.indentscope", version = "*", opts = {} },
 	{ "echasnovski/mini.move", version = "*", opts = {} },
+	{ "echasnovski/mini.pairs", version = "*", opts = {} },
 	{ "echasnovski/mini.splitjoin", version = "*", opts = { mappings = { toggle = "fS" } } },
 	{
 		"echasnovski/mini.files",
