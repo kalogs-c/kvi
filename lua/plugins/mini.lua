@@ -1,7 +1,3 @@
-local function startsWith(str, prefix)
-	return string.sub(str, 1, #prefix) == prefix
-end
-
 return {
 	{ "echasnovski/mini.ai", version = "*", opts = {} },
 	{ "echasnovski/mini.surround", version = "*", opts = {} },
@@ -17,7 +13,7 @@ return {
 		config = function()
 			vim.keymap.set("n", "<C-n>", function()
 				local buf = vim.api.nvim_buf_get_name(0)
-				if #buf > 0 and not startsWith(buf, "/") then
+				if #buf > 0 and not StartsWith(buf, "/") then
 					require("mini.files").close()
 				else
 					require("mini.files").open(buf, false)

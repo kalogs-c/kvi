@@ -42,17 +42,6 @@ vim.diagnostic.config({
 
 vim.lsp.inlay_hint.enable()
 
-local function merge_tables(t1, t2)
-	local result = {}
-	for k, v in pairs(t1) do
-		result[k] = v
-	end
-	for k, v in pairs(t2) do
-		result[k] = v
-	end
-	return result
-end
-
 for _, lang in pairs(languages) do
 	local server = lang.lsp
 	local opts = {
@@ -63,7 +52,7 @@ for _, lang in pairs(languages) do
 
 	if type(lang.lsp) == "table" then
 		server = lang.lsp.name
-		opts = merge_tables(opts, lang.lsp.opts)
+		opts = MergeTables(opts, lang.lsp.opts)
 	end
 
 	require("lspconfig")[server].setup(opts)
