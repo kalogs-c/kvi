@@ -32,7 +32,6 @@ return {
 			opts = {
 				settings = {
 					gopls = {
-						gofumpt = true,
 						codelenses = {
 							gc_details = false,
 							generate = true,
@@ -44,13 +43,10 @@ return {
 							vendor = true,
 						},
 						hints = {
-							assignVariableTypes = true,
 							compositeLiteralFields = true,
-							compositeLiteralTypes = true,
 							constantValues = true,
 							functionTypeParameters = true,
 							parameterNames = true,
-							rangeVariableTypes = true,
 						},
 						analyses = {
 							nilness = true,
