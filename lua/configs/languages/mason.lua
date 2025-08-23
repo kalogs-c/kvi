@@ -29,19 +29,15 @@ local mason_tools = {
 
 local languages = require("configs.languages")
 for _, lang in pairs(languages) do
-	local server = lang.lsp
-	if type(lang.lsp) == "table" then
-		server = lang.lsp.name
+	local server = type(lang.lsp) == "table" and lang.lsp.name or lang.lsp
+	local tools = lang.tools
+	if type(lang.tools) == "string" then
+		tools = { lang.tools }
 	end
 
 	table.insert(mason_lsp.ensure_installed, server)
-
-	if type(lang.tools) == "string" then
-		table.insert(mason_tools.ensure_installed, lang.tools)
-	else
-		for _, tool in pairs(lang.tools or {}) do
-			table.insert(mason_tools.ensure_installed, tool)
-		end
+	for _, tool in pairs(tools or {}) do
+		table.insert(mason_tools.ensure_installed, tool)
 	end
 end
 

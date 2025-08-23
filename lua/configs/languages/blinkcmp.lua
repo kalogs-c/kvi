@@ -1,5 +1,3 @@
----@module 'blink.cmp'
----@type blink.cmp.Config
 return {
 	-- C-space: Open menu or open docs if already open
 	-- C-n/C-p or Up/Down: Select next/previous item
