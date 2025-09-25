@@ -55,5 +55,6 @@ for _, lang in pairs(languages) do
 		opts = MergeTables(opts, lang.lsp.opts)
 	end
 
-	require("lspconfig")[server].setup(opts)
+	vim.lsp.config(server, opts)
+	vim.lsp.enable(server)
 end

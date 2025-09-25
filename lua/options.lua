@@ -88,13 +88,13 @@ vim.g.loaded_ruby_provider = 0
 -- Clipboard
 vim.opt.clipboard:append("unnamedplus")
 
-local function is_wsl()
+local function IsWsl()
 	local wsl_env = vim.fn.getenv("WSLENV")
 	local uname = vim.fn.system("uname -r")
 	return wsl_env ~= vim.NIL or uname:match("WSL") ~= nil
 end
 
-if is_wsl() then
+if IsWsl() then
 	vim.g.clipboard = {
 		name = "WslClipboard",
 		copy = { ["+"] = "clip.exe", ["*"] = "clip.exe" },
