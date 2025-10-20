@@ -4,13 +4,6 @@ local function augroup(group_name)
 	return vim.api.nvim_create_augroup(group_name, { clear = true })
 end
 
--- update lazy plugins
-autocmd("VimEnter", {
-	callback = function()
-		require("lazy").update({ show = false })
-	end,
-})
-
 -- Highlight text on yank
 autocmd("TextYankPost", {
 	group = augroup("HighlightOnYank"),
