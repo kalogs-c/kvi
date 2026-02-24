@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 map("i", "jk", "<ESC>")
 map("n", "<ESC>", "<cmd>noh<CR><ESC>")
+map("t", "<ESC>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 map("v", "p", '"_dP')
 
 -- move on insert mode
@@ -46,3 +47,8 @@ map("n", "<C-u>", "<C-u>zz", { desc = "half page up (centered)" })
 
 -- save
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "save file" })
+
+-- copy relative path
+map("n", "<leader>pwd", function()
+	vim.fn.setreg("+", vim.fn.expand("%:."))
+end, { desc = "copy relative file path" })
