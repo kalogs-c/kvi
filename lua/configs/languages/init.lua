@@ -28,6 +28,7 @@ return {
 	},
 	markdown = {
 		lsp = "marksman",
+		tools = "rumdl",
 		fmt = "rumdl",
 	},
 	go = {
