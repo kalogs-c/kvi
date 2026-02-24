@@ -25,7 +25,7 @@ return {
 		lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
 		opts = require("configs.languages.treesitter"),
 		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
+			require("nvim-treesitter.config").setup(opts)
 		end,
 	},
 

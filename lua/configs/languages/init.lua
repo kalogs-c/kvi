@@ -55,17 +55,4 @@ return {
 		tools = { "delve", "goimports", "gofumpt" },
 		fmt = { "goimports", "gofumpt" },
 	},
-	zig = {
-		lsp = "zls",
-		fmt = "zigfmt",
-	},
-	elixir = {
-		lsp = {
-			name = "elixirls",
-			opts = {
-				cmd = { vim.fn.expand("$HOME/") .. "/.local/share/nvim/mason/bin/elixir-ls" },
-			},
-		},
-		fmt = "mix format",
-	},
 }
