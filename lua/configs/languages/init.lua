@@ -26,6 +26,10 @@ return {
 		tools = "stylua",
 		fmt = "stylua",
 	},
+	markdown = {
+		lsp = "marksman",
+		fmt = "rumdl",
+	},
 	go = {
 		lsp = {
 			name = "gopls",
