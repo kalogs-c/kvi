@@ -56,8 +56,8 @@ return {
 		"vim-test/vim-test",
 		cmd = { "TestLast", "TestNearest", "TestFile", "TestSuite" },
 		keys = {
-			{ "<leader>trn", ":TestNearest<cr>", "TEST - Run Nearest" },
-			{ "<leader>trf", ":TestFile<cr>", "TEST - Run File" },
+			{ "<leader>trn", ":TestNearest<cr>", desc = "test run nearest" },
+			{ "<leader>trf", ":TestFile<cr>", desc = "test run file" },
 		},
 		config = function()
 			require("configs.languages.vim-test")
@@ -86,20 +86,20 @@ return {
 				return {
 					"<leader>" .. keys,
 					func,
-					{ desc = "DEBUG - " .. desc },
+					desc = "debug " .. desc,
 				}
 			end
 
 			return {
-				map("db", dap.toggle_breakpoint, "Toggle Breakpoint"),
-				map("dc", dap.continue, "Continue"),
-				map("dt", dap.terminate, "Terminate"),
-				map("dso", dap.step_over, "Step Over"),
-				map("dsi", dap.step_into, "Step Into"),
+				map("db", dap.toggle_breakpoint, "toggle breakpoint"),
+				map("dc", dap.continue, "continue"),
+				map("dt", dap.terminate, "terminate"),
+				map("dso", dap.step_over, "step over"),
+				map("dsi", dap.step_into, "step into"),
 				map("?", function()
 					require("dapui").eval()
 					require("dapui").eval() -- trick to focus
-				end, "Evaluate Expression"),
+				end, "evaluate expression"),
 			}
 		end,
 	},

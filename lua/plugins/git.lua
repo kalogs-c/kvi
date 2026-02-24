@@ -37,16 +37,16 @@ return {
 				{
 					"[c",
 					function()
-						gitsigns.nav_hunk("next")
+						gitsigns.nav_hunk("prev")
 					end,
-					desc = "go to next git change",
+					desc = "go to previous git change",
 				},
 				{
 					"]c",
 					function()
-						gitsigns.nav_hunk("prev")
+						gitsigns.nav_hunk("next")
 					end,
-					desc = "go to prev git change",
+					desc = "go to next git change",
 				},
 			}
 		end,

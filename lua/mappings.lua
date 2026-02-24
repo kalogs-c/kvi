@@ -17,10 +17,10 @@ map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 -- resizing
-map("n", "<C-Up>", ":resize +5<CR>", { desc = "Increase window height" })
-map("n", "<C-Down>", ":resize -5<CR>", { desc = "Decrease window height" })
-map("n", "<C-Left>", ":vertical resize +5<CR>", { desc = "Increase window width" })
-map("n", "<C-Right>", ":vertical resize -5<CR>", { desc = "Decrease window width" })
+map("n", "<C-Up>", ":resize +5<CR>", { desc = "increase window height" })
+map("n", "<C-Down>", ":resize -5<CR>", { desc = "decrease window height" })
+map("n", "<C-Left>", ":vertical resize +5<CR>", { desc = "increase window width" })
+map("n", "<C-Right>", ":vertical resize -5<CR>", { desc = "decrease window width" })
 
 -- buffers
 map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "next buffer" })
@@ -39,10 +39,10 @@ map({ "n", "v" }, ">", ">gv")
 map({ "n", "v" }, "<", "<gv")
 
 -- center screen when jumping
-map("n", "n", "nzzzv", { desc = "Next search result (centered)" })
-map("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
-map("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
-map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
+map("n", "n", "nzzzv", { desc = "next search result (centered)" })
+map("n", "N", "Nzzzv", { desc = "previous search result (centered)" })
+map("n", "<C-d>", "<C-d>zz", { desc = "half page down (centered)" })
+map("n", "<C-u>", "<C-u>zz", { desc = "half page up (centered)" })
 
 -- save
-map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "save File" })
+map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "save file" })

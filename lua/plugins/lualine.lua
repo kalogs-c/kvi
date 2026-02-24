@@ -34,7 +34,7 @@ return {
 					symbols = { alternate_file = "" },
 					hide_filename_extension = true,
 				},
-			},
+			}
 			lualine_x = { "diff" },
 			lualine_z = {
 				{
